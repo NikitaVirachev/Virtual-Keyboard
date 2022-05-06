@@ -6,6 +6,10 @@
     color: #ffffff;
     cursor: pointer;
     border-radius: 3px;
+    &:hover{
+        background-color: $primary;
+        transition: border-radius 0.3s, background-color 0.3s;
+    }
 }
 
 .standard{
