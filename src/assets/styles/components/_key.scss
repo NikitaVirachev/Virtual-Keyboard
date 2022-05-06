@@ -1,0 +1,99 @@
+.key{
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.standard{
+    width: 40px;
+    background: $medium-fill;
+}
+
+.backspace{
+    width: 100px;
+    background: $dark-fill;
+}
+
+.tab{
+    width: 50px;
+    background: $dark-fill;
+}
+
+.del{
+    width: 44px;
+    background: $dark-fill;
+}
+
+.caps{
+    width: 100px;
+    background: $dark-fill;
+}
+
+.enter{
+    width: 86px;
+    background: $dark-fill;
+}
+
+.shift-left{
+    width: 100px;
+    background: $dark-fill;
+}
+
+.arrow-up{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.shift-right{
+    width: 86px;
+    background: $dark-fill;
+}
+
+.ctrl-left{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.win{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.alt-left{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.space{
+    width: 330px;
+    background: $medium-fill;
+}
+
+.alt-right{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.arrow-left{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.arrow-bottom{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.arrow-right{
+    width: 40px;
+    background: $dark-fill;
+}
+
+.ctrl-right{
+    width: 40px;
+    background: $dark-fill;
+}

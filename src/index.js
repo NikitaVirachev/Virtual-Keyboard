@@ -1,4 +1,8 @@
 import './assets/styles/main.scss';
+import { Row } from './assets/modules/row.js';
+import {
+  rowOne, rowTwo, rowThree, rowFour, rowFive
+} from './assets/modules/variables.js';
 
 const BODY = document.body;
 
@@ -18,6 +22,20 @@ wrapper.append(wrapperText);
 
 const virtualKeyboard = document.createElement('div');
 virtualKeyboard.classList.add('virtual-keyboard');
+
+let rows = [];
+rows.push(rowOne);
+rows.push(rowTwo);
+rows.push(rowThree);
+rows.push(rowFour);
+rows.push(rowFive);
+
+rows.forEach(row => {
+  let newRow = new Row();
+  newRow.fillElement(row);
+  virtualKeyboard.append(newRow.getElement());
+});
+
 wrapper.append(virtualKeyboard);
 
 const wrapperDescription = document.createElement('p');
