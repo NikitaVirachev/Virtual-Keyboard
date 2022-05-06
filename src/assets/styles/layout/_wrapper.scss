@@ -1,0 +1,29 @@
+.wrapper{
+    margin: 0px auto;
+}
+
+.wrapper__title{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.wrapper__text{
+    width: 700px;
+    height: 200px;
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.wrapper__description, .wrapper__language{
+    margin: 10px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}

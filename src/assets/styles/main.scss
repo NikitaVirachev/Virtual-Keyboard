@@ -1,7 +1,3 @@
-$body-color: red;
+@import 'layout/wrapper';
 
-body {
-  width: 100px;
-  height: 100px;
-  background-color: $body-color;
-}
+@import 'pages/home';
