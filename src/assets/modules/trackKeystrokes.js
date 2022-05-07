@@ -10,7 +10,11 @@ export function trackKeystrokes() {
     let selEnd = textarea.selectionEnd;
 
     if (key.classList[1] === 'standard') {
-      textarea.value += event.key;
+      textarea.value = textarea.value.slice(0, selStart)
+        + event.key
+        + textarea.value.slice(selStart);
+      textarea.selectionStart = selStart + 1;
+      textarea.selectionEnd = selStart + 1;
     } else if (key.classList[1] === 'backspace') {
       if (selStart !== selEnd) {
         textarea.value = textarea.value.slice(0, selStart)
