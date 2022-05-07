@@ -17,6 +17,7 @@ wrapper.append(wrapperTitle);
 
 const wrapperText = document.createElement('textarea');
 wrapperText.classList.add('wrapper__text');
+wrapperText.id = 'textarea';
 wrapperText.style.cols = '30';
 wrapperText.style.rows = '10';
 wrapper.append(wrapperText);
