@@ -8,8 +8,9 @@ export class Key {
     return this.keyElement;
   }
 
-  fillElement(type, value, ...mutableValues) {
+  fillElement(type, id, value, ...mutableValues) {
     this.keyElement.classList.add(type);
+    this.keyElement.id = id;
 
     const eng = document.createElement('span');
     eng.classList.add('key__eng');

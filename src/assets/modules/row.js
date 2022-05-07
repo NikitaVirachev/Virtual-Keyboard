@@ -17,13 +17,14 @@ export class Row {
       if (element.type === 'standard') {
         keyElement.fillElement(
           element.type,
+          element.id,
           element.engCaseDown,
           element.engCaseUp,
           element.ruCaseDown,
           element.ruCaseUp
         );
       } else {
-        keyElement.fillElement(element.type, element.value);
+        keyElement.fillElement(element.type, element.id, element.value);
       }
 
       this.rowElement.append(keyElement.getElement());

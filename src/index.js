@@ -3,6 +3,7 @@ import { Row } from './assets/modules/row.js';
 import {
   rowOne, rowTwo, rowThree, rowFour, rowFive
 } from './assets/modules/variables.js';
+import { trackKeystrokes } from './assets/modules/trackKeystrokes';
 
 const BODY = document.body;
 
@@ -49,3 +50,5 @@ wrapperLanguage.innerHTML = 'Для переключения языка комб
 wrapper.append(wrapperLanguage);
 
 BODY.append(wrapper);
+
+trackKeystrokes();

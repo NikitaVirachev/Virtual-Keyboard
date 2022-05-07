@@ -1,6 +1,7 @@
 const rowOne = [
   {
     type: 'standard',
+    id: 'Backquote',
     engCaseDown: '`',
     engCaseUp: '~',
     ruCaseDown: 'ё',
@@ -8,6 +9,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit1',
     engCaseDown: '1',
     engCaseUp: '!',
     ruCaseDown: '1',
@@ -15,6 +17,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit2',
     engCaseDown: '2',
     engCaseUp: '@',
     ruCaseDown: '2',
@@ -22,6 +25,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit3',
     engCaseDown: '3',
     engCaseUp: '#',
     ruCaseDown: '3',
@@ -29,6 +33,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit4',
     engCaseDown: '4',
     engCaseUp: '$',
     ruCaseDown: '4',
@@ -36,6 +41,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit5',
     engCaseDown: '5',
     engCaseUp: '%',
     ruCaseDown: '5',
@@ -43,6 +49,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit6',
     engCaseDown: '6',
     engCaseUp: '^',
     ruCaseDown: '6',
@@ -50,6 +57,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit7',
     engCaseDown: '7',
     engCaseUp: '&',
     ruCaseDown: '7',
@@ -57,6 +65,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit8',
     engCaseDown: '8',
     engCaseUp: '*',
     ruCaseDown: '8',
@@ -64,6 +73,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit9',
     engCaseDown: '9',
     engCaseUp: '(',
     ruCaseDown: '9',
@@ -71,6 +81,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Digit0',
     engCaseDown: '0',
     engCaseUp: ')',
     ruCaseDown: '0',
@@ -78,6 +89,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'NumpadSubtract',
     engCaseDown: '-',
     engCaseUp: '_',
     ruCaseDown: '-',
@@ -85,6 +97,7 @@ const rowOne = [
   },
   {
     type: 'standard',
+    id: 'Equal',
     engCaseDown: '=',
     engCaseUp: '+',
     ruCaseDown: '=',
@@ -92,6 +105,7 @@ const rowOne = [
   },
   {
     type: 'backspace',
+    id: 'Backspace',
     value: 'Backspace'
   }
 ];
@@ -99,10 +113,12 @@ const rowOne = [
 const rowTwo = [
   {
     type: 'tab',
+    id: 'Tab',
     value: 'Tab'
   },
   {
     type: 'standard',
+    id: 'KeyQ',
     engCaseDown: 'q',
     engCaseUp: 'Q',
     ruCaseDown: 'й',
@@ -110,6 +126,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyW',
     engCaseDown: 'w',
     engCaseUp: 'W',
     ruCaseDown: 'ц',
@@ -117,6 +134,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyE',
     engCaseDown: 'e',
     engCaseUp: 'E',
     ruCaseDown: 'у',
@@ -124,6 +142,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyR',
     engCaseDown: 'r',
     engCaseUp: 'R',
     ruCaseDown: 'к',
@@ -131,6 +150,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyT',
     engCaseDown: 't',
     engCaseUp: 'T',
     ruCaseDown: 'е',
@@ -138,6 +158,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyY',
     engCaseDown: 'y',
     engCaseUp: 'Y',
     ruCaseDown: 'н',
@@ -145,6 +166,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyU',
     engCaseDown: 'u',
     engCaseUp: 'U',
     ruCaseDown: 'г',
@@ -152,6 +174,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyI',
     engCaseDown: 'i',
     engCaseUp: 'I',
     ruCaseDown: 'ш',
@@ -159,6 +182,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyO',
     engCaseDown: 'o',
     engCaseUp: 'O',
     ruCaseDown: 'щ',
@@ -166,6 +190,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'KeyP',
     engCaseDown: 'p',
     engCaseUp: 'P',
     ruCaseDown: 'з',
@@ -173,6 +198,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'BracketLeft',
     engCaseDown: '[',
     engCaseUp: '{',
     ruCaseDown: 'х',
@@ -180,6 +206,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'BracketRight',
     engCaseDown: ']',
     engCaseUp: '}',
     ruCaseDown: 'ъ',
@@ -187,6 +214,7 @@ const rowTwo = [
   },
   {
     type: 'standard',
+    id: 'Backslash',
     engCaseDown: '\\',
     engCaseUp: '|',
     ruCaseDown: '\\',
@@ -194,6 +222,7 @@ const rowTwo = [
   },
   {
     type: 'del',
+    id: 'NumpadDecimal',
     value: 'Del'
   }
 ];
@@ -201,10 +230,12 @@ const rowTwo = [
 const rowThree = [
   {
     type: 'caps',
+    id: 'CapsLock',
     value: 'CapsLock'
   },
   {
     type: 'standard',
+    id: 'KeyA',
     engCaseDown: 'a',
     engCaseUp: 'A',
     ruCaseDown: 'ф',
@@ -212,6 +243,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyS',
     engCaseDown: 's',
     engCaseUp: 'S',
     ruCaseDown: 'ы',
@@ -219,6 +251,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyD',
     engCaseDown: 'd',
     engCaseUp: 'D',
     ruCaseDown: 'в',
@@ -226,6 +259,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyF',
     engCaseDown: 'f',
     engCaseUp: 'F',
     ruCaseDown: 'а',
@@ -233,6 +267,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyG',
     engCaseDown: 'g',
     engCaseUp: 'G',
     ruCaseDown: 'п',
@@ -240,6 +275,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyH',
     engCaseDown: 'h',
     engCaseUp: 'H',
     ruCaseDown: 'р',
@@ -247,6 +283,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyJ',
     engCaseDown: 'j',
     engCaseUp: 'J',
     ruCaseDown: 'о',
@@ -254,6 +291,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyK',
     engCaseDown: 'k',
     engCaseUp: 'K',
     ruCaseDown: 'л',
@@ -261,6 +299,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'KeyL',
     engCaseDown: 'l',
     engCaseUp: 'L',
     ruCaseDown: 'д',
@@ -268,6 +307,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'Semicolon',
     engCaseDown: ';',
     engCaseUp: ':',
     ruCaseDown: 'ж',
@@ -275,6 +315,7 @@ const rowThree = [
   },
   {
     type: 'standard',
+    id: 'Quote',
     engCaseDown: '\'',
     engCaseUp: '"',
     ruCaseDown: 'э',
@@ -282,6 +323,7 @@ const rowThree = [
   },
   {
     type: 'enter',
+    id: 'Enter',
     value: 'Enter'
   }
 ];
@@ -289,10 +331,12 @@ const rowThree = [
 const rowFour = [
   {
     type: 'shift-left',
+    id: 'ShiftLeft',
     value: 'Shift'
   },
   {
     type: 'standard',
+    id: 'KeyZ',
     engCaseDown: 'z',
     engCaseUp: 'Z',
     ruCaseDown: 'я',
@@ -300,6 +344,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'KeyX',
     engCaseDown: 'x',
     engCaseUp: 'X',
     ruCaseDown: 'ч',
@@ -307,6 +352,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'KeyC',
     engCaseDown: 'c',
     engCaseUp: 'C',
     ruCaseDown: 'с',
@@ -314,6 +360,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'KeyV',
     engCaseDown: 'v',
     engCaseUp: 'V',
     ruCaseDown: 'м',
@@ -321,6 +368,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'KeyB',
     engCaseDown: 'b',
     engCaseUp: 'B',
     ruCaseDown: 'и',
@@ -328,6 +376,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'KeyN',
     engCaseDown: 'n',
     engCaseUp: 'N',
     ruCaseDown: 'т',
@@ -335,6 +384,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'KeyM',
     engCaseDown: 'm',
     engCaseUp: 'M',
     ruCaseDown: 'ь',
@@ -342,6 +392,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'NumpadDecimal',
     engCaseDown: ',',
     engCaseUp: '<',
     ruCaseDown: 'б',
@@ -349,6 +400,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'Period',
     engCaseDown: '.',
     engCaseUp: '>',
     ruCaseDown: 'ю',
@@ -356,6 +408,7 @@ const rowFour = [
   },
   {
     type: 'standard',
+    id: 'Slash',
     engCaseDown: '/',
     engCaseUp: '?',
     ruCaseDown: '.',
@@ -363,10 +416,12 @@ const rowFour = [
   },
   {
     type: 'arrow-up',
+    id: 'ArrowUp',
     value: '&#9650;'
   },
   {
     type: 'shift-right',
+    id: 'ShiftRight',
     value: 'Shift'
   }
 ];
@@ -374,38 +429,47 @@ const rowFour = [
 const rowFive = [
   {
     type: 'ctrl-left',
+    id: 'ControlLeft',
     value: 'Ctrl'
   },
   {
     type: 'win',
+    id: 'MetaLeft',
     value: 'Win'
   },
   {
     type: 'alt-left',
+    id: 'AltLeft',
     value: 'Alt'
   },
   {
     type: 'space',
+    id: 'Space',
     value: ''
   },
   {
     type: 'alt-right',
+    id: 'AltRight',
     value: 'Alt'
   },
   {
     type: 'arrow-left',
+    id: 'ArrowLeft',
     value: '&#9668;'
   },
   {
     type: 'arrow-bottom',
+    id: 'ArrowDown',
     value: '&#9660;'
   },
   {
     type: 'arrow-right',
+    id: 'ArrowRight',
     value: '&#9658;'
   },
   {
     type: 'ctrl-right',
+    id: 'ControlRight',
     value: 'Ctrl'
   }
 ];
