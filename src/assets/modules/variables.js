@@ -222,7 +222,7 @@ const rowTwo = [
   },
   {
     type: 'del',
-    id: 'NumpadDecimal',
+    id: 'Delete',
     value: 'Del'
   }
 ];
@@ -392,7 +392,7 @@ const rowFour = [
   },
   {
     type: 'standard',
-    id: 'NumpadDecimal',
+    id: 'Comma',
     engCaseDown: ',',
     engCaseUp: '<',
     ruCaseDown: 'б',

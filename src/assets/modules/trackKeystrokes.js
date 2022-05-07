@@ -5,9 +5,18 @@ export function trackKeystrokes() {
     let key = document.getElementById(event.code);
     key.classList.add('pressed');
 
+    let textarea = document.getElementById('textarea');
+
     if (key.classList[1] === 'standard') {
-      let textarea = document.getElementById('textarea');
       textarea.value += event.key;
+    } else if (key.classList[1] === 'backspace') {
+      textarea.value = textarea.value.slice(0, -1);
+    } else if (key.classList[1] === 'del') {
+      let selStart = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0, selStart)
+        + textarea.value.slice(selStart + 1);
+      textarea.selectionStart = selStart;
+      textarea.selectionEnd = selStart;
     }
   });
 
