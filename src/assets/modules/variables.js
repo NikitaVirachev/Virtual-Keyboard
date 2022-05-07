@@ -89,7 +89,7 @@ const rowOne = [
   },
   {
     type: 'standard',
-    id: 'NumpadSubtract',
+    id: 'Minus',
     engCaseDown: '-',
     engCaseUp: '_',
     ruCaseDown: '-',
