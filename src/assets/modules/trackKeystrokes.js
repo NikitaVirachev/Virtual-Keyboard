@@ -69,6 +69,12 @@ export function trackKeystrokes() {
         + textarea.value.slice(selStart);
       textarea.selectionStart = selStart + 1;
       textarea.selectionEnd = selStart + 1;
+    } else if (key.classList[1] === 'space') {
+      textarea.value = textarea.value.slice(0, selStart)
+        + ' '
+        + textarea.value.slice(selStart);
+      textarea.selectionStart = selStart + 1;
+      textarea.selectionEnd = selStart + 1;
     }
   });
 
