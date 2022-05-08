@@ -21,6 +21,9 @@ export class Key {
     const engCaseUp = document.createElement('span');
     engCaseUp.classList.add('caseUp', 'hidden');
 
+    const engCaps = document.createElement('span');
+    engCaps.classList.add('caps', 'hidden');
+
     const rus = document.createElement('span');
     rus.classList.add('key__rus', 'hidden');
 
@@ -30,18 +33,25 @@ export class Key {
     const rusCaseUp = document.createElement('span');
     rusCaseUp.classList.add('caseUp', 'hidden');
 
+    const ruCaps = document.createElement('span');
+    ruCaps.classList.add('caps', 'hidden');
+
     if (type === 'standard') {
       engCaseDown.innerHTML = value;
       engCaseUp.innerHTML = mutableValues[0];
+      engCaps.innerHTML = mutableValues[1];
 
       eng.append(engCaseDown);
       eng.append(engCaseUp);
+      eng.append(engCaps);
 
-      rusCaseDown.innerHTML = mutableValues[1];
-      rusCaseUp.innerHTML = mutableValues[2];
+      rusCaseDown.innerHTML = mutableValues[2];
+      rusCaseUp.innerHTML = mutableValues[3];
+      ruCaps.innerHTML = mutableValues[4];
 
       rus.append(rusCaseDown);
       rus.append(rusCaseUp);
+      rus.append(ruCaps);
     } else {
       engCaseDown.innerHTML = value;
       engCaseUp.innerHTML = value;

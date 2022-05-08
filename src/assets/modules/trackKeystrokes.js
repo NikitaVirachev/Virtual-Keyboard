@@ -8,6 +8,7 @@ export function trackKeystrokes() {
     let textarea = document.getElementById('textarea');
     let selStart = textarea.selectionStart;
     let selEnd = textarea.selectionEnd;
+    let allCharacterKeys = document.querySelectorAll('.standard');
 
     if (key.classList[1] === 'standard') {
       textarea.value = textarea.value.slice(0, selStart)
@@ -81,6 +82,37 @@ export function trackKeystrokes() {
         + textarea.value.slice(selStart);
       textarea.selectionStart = selStart + 1;
       textarea.selectionEnd = selStart + 1;
+    } else if ((key.classList[1] === 'shift-left') || (key.classList[1] === 'shift-right')) {
+      allCharacterKeys.forEach(element => {
+        let keyEng = element.querySelector('.key__eng');
+        let keyRus = element.querySelector('.key__rus');
+
+        if (keyEng.matches('.hidden')) {
+          let ruCaps = keyRus.querySelector('.caps');
+          let ruCaseDown = keyRus.querySelector('.caseDown');
+          let ruCaseUp = keyRus.querySelector('.caseUp');
+
+          if (ruCaps.matches('.hidden')) {
+            ruCaseDown.classList.add('hidden');
+            ruCaseUp.classList.remove('hidden');
+          } else {
+            ruCaseUp.classList.add('hidden');
+            ruCaseDown.classList.remove('hidden');
+          }
+        } else {
+          let engCaps = keyEng.querySelector('.caps');
+          let engCaseDown = keyEng.querySelector('.caseDown');
+          let engCaseUp = keyEng.querySelector('.caseUp');
+
+          if (engCaps.matches('.hidden')) {
+            engCaseDown.classList.add('hidden');
+            engCaseUp.classList.remove('hidden');
+          } else {
+            engCaseUp.classList.add('hidden');
+            engCaseDown.classList.remove('hidden');
+          }
+        }
+      });
     }
   });
 
@@ -88,5 +120,40 @@ export function trackKeystrokes() {
     let key = document.getElementById(event.code);
     key.classList.remove('pressed');
     key.classList.add('unpressed');
+
+    let allCharacterKeys = document.querySelectorAll('.standard');
+
+    if ((key.classList[1] === 'shift-left') || (key.classList[1] === 'shift-right')) {
+      allCharacterKeys.forEach(element => {
+        let keyEng = element.querySelector('.key__eng');
+        let keyRus = element.querySelector('.key__rus');
+
+        if (keyEng.matches('.hidden')) {
+          let ruCaps = keyRus.querySelector('.caps');
+          let ruCaseDown = keyRus.querySelector('.caseDown');
+          let ruCaseUp = keyRus.querySelector('.caseUp');
+
+          if (ruCaps.matches('.hidden')) {
+            ruCaseUp.classList.add('hidden');
+            ruCaseDown.classList.remove('hidden');
+          } else {
+            ruCaseDown.classList.add('hidden');
+            ruCaseUp.classList.remove('hidden');
+          }
+        } else {
+          let engCaps = keyEng.querySelector('.caps');
+          let engCaseDown = keyEng.querySelector('.caseDown');
+          let engCaseUp = keyEng.querySelector('.caseUp');
+
+          if (engCaps.matches('.hidden')) {
+            engCaseUp.classList.add('hidden');
+            engCaseDown.classList.remove('hidden');
+          } else {
+            engCaseDown.classList.add('hidden');
+            engCaseUp.classList.remove('hidden');
+          }
+        }
+      });
+    }
   });
 }

@@ -20,8 +20,10 @@ export class Row {
           element.id,
           element.engCaseDown,
           element.engCaseUp,
+          element.engCaps,
           element.ruCaseDown,
-          element.ruCaseUp
+          element.ruCaseUp,
+          element.ruCaps
         );
       } else {
         keyElement.fillElement(element.type, element.id, element.value);
