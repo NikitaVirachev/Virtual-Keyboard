@@ -52,4 +52,5 @@ wrapper.append(wrapperLanguage);
 
 BODY.append(wrapper);
 
+if (sessionStorage.length === 0) sessionStorage.setItem('layout', 'eng');
 trackKeystrokes();

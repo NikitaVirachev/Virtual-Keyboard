@@ -87,6 +87,30 @@ export function trackKeystrokes() {
     } else if ((key.classList[1] === 'shift-left') || (key.classList[1] === 'shift-right')) {
       state.setShift(true);
 
+      if ((key.classList[1] === 'shift-left') && state.getAlt()) {
+        if (sessionStorage.getItem('layout') === 'eng') {
+          sessionStorage.setItem('layout', 'rus');
+
+          allCharacterKeys.forEach(element => {
+            let keyEng = element.querySelector('.key__eng');
+            let keyRus = element.querySelector('.key__rus');
+
+            keyEng.classList.add('hidden');
+            keyRus.classList.remove('hidden');
+          });
+        } else {
+          sessionStorage.setItem('layout', 'eng');
+
+          allCharacterKeys.forEach(element => {
+            let keyEng = element.querySelector('.key__eng');
+            let keyRus = element.querySelector('.key__rus');
+
+            keyRus.classList.add('hidden');
+            keyEng.classList.remove('hidden');
+          });
+        }
+      }
+
       allCharacterKeys.forEach(element => {
         let keyEng = element.querySelector('.key__eng');
         let keyRus = element.querySelector('.key__rus');
@@ -171,6 +195,32 @@ export function trackKeystrokes() {
           }
         }
       });
+    } else if (key.classList[1] === 'alt-left') {
+      state.setAlt();
+
+      if (state.getShift()) {
+        if (sessionStorage.getItem('layout') === 'eng') {
+          sessionStorage.setItem('layout', 'rus');
+
+          allCharacterKeys.forEach(element => {
+            let keyEng = element.querySelector('.key__eng');
+            let keyRus = element.querySelector('.key__rus');
+
+            keyEng.classList.add('hidden');
+            keyRus.classList.remove('hidden');
+          });
+        } else {
+          sessionStorage.setItem('layout', 'eng');
+
+          allCharacterKeys.forEach(element => {
+            let keyEng = element.querySelector('.key__eng');
+            let keyRus = element.querySelector('.key__rus');
+
+            keyRus.classList.add('hidden');
+            keyEng.classList.remove('hidden');
+          });
+        }
+      }
     }
   });
 
@@ -218,6 +268,8 @@ export function trackKeystrokes() {
           }
         }
       });
+    } else if (key.classList[1] === 'alt-left') {
+      state.setAlt();
     }
   });
 }

@@ -13,7 +13,11 @@ export class Key {
     this.keyElement.id = id;
 
     const eng = document.createElement('span');
-    eng.classList.add('key__eng');
+    if (sessionStorage.getItem('layout') === 'eng') {
+      eng.classList.add('key__eng');
+    } else {
+      eng.classList.add('key__eng', 'hidden');
+    }
 
     const engCaseDown = document.createElement('span');
     engCaseDown.classList.add('caseDown');
@@ -28,7 +32,11 @@ export class Key {
     engShiftCaps.classList.add('shiftCaps', 'hidden');
 
     const rus = document.createElement('span');
-    rus.classList.add('key__rus', 'hidden');
+    if (sessionStorage.getItem('layout') === 'rus') {
+      rus.classList.add('key__rus');
+    } else {
+      rus.classList.add('key__rus', 'hidden');
+    }
 
     const rusCaseDown = document.createElement('span');
     rusCaseDown.classList.add('caseDown');
