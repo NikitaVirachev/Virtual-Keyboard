@@ -21,9 +21,11 @@ export class Row {
           element.engCaseDown,
           element.engCaseUp,
           element.engCaps,
+          element.engShiftCaps,
           element.ruCaseDown,
           element.ruCaseUp,
-          element.ruCaps
+          element.ruCaps,
+          element.ruShiftCaps
         );
       } else {
         keyElement.fillElement(element.type, element.id, element.value);

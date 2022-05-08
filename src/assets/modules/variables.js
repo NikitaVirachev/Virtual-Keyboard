@@ -5,9 +5,11 @@ const rowOne = [
     engCaseDown: '`',
     engCaseUp: '~',
     engCaps: '`',
+    engShiftCaps: '~',
     ruCaseDown: 'ё',
     ruCaseUp: 'Ё',
-    ruCaps: 'Ё'
+    ruCaps: 'Ё',
+    ruShiftCaps: 'ё'
   },
   {
     type: 'standard',
@@ -15,9 +17,11 @@ const rowOne = [
     engCaseDown: '1',
     engCaseUp: '!',
     engCaps: '1',
+    engShiftCaps: '!',
     ruCaseDown: '1',
     ruCaseUp: '!',
-    ruCaps: '1'
+    ruCaps: '1',
+    ruShiftCaps: '!'
   },
   {
     type: 'standard',
@@ -25,9 +29,11 @@ const rowOne = [
     engCaseDown: '2',
     engCaseUp: '@',
     engCaps: '2',
+    engShiftCaps: '@',
     ruCaseDown: '2',
     ruCaseUp: '"',
-    ruCaps: '2'
+    ruCaps: '2',
+    ruShiftCaps: '"'
   },
   {
     type: 'standard',
@@ -35,9 +41,11 @@ const rowOne = [
     engCaseDown: '3',
     engCaseUp: '#',
     engCaps: '3',
+    engShiftCaps: '#',
     ruCaseDown: '3',
     ruCaseUp: '№',
-    ruCaps: '3'
+    ruCaps: '3',
+    ruShiftCaps: '№'
   },
   {
     type: 'standard',
@@ -45,9 +53,11 @@ const rowOne = [
     engCaseDown: '4',
     engCaseUp: '$',
     engCaps: '4',
+    engShiftCaps: '$',
     ruCaseDown: '4',
     ruCaseUp: ';',
-    ruCaps: '4'
+    ruCaps: '4',
+    ruShiftCaps: ';'
   },
   {
     type: 'standard',
@@ -55,9 +65,11 @@ const rowOne = [
     engCaseDown: '5',
     engCaseUp: '%',
     engCaps: '5',
+    engShiftCaps: '%',
     ruCaseDown: '5',
     ruCaseUp: '%',
-    ruCaps: '5'
+    ruCaps: '5',
+    ruShiftCaps: '%'
   },
   {
     type: 'standard',
@@ -65,9 +77,11 @@ const rowOne = [
     engCaseDown: '6',
     engCaseUp: '^',
     engCaps: '6',
+    engShiftCaps: '^',
     ruCaseDown: '6',
     ruCaseUp: ':',
-    ruCaps: '6'
+    ruCaps: '6',
+    ruShiftCaps: ':'
   },
   {
     type: 'standard',
@@ -75,9 +89,11 @@ const rowOne = [
     engCaseDown: '7',
     engCaseUp: '&',
     engCaps: '7',
+    engShiftCaps: '&',
     ruCaseDown: '7',
     ruCaseUp: '?',
-    ruCaps: '7'
+    ruCaps: '7',
+    ruShiftCaps: '?'
   },
   {
     type: 'standard',
@@ -85,9 +101,11 @@ const rowOne = [
     engCaseDown: '8',
     engCaseUp: '*',
     engCaps: '8',
+    engShiftCaps: '*',
     ruCaseDown: '8',
     ruCaseUp: '*',
-    ruCaps: '8'
+    ruCaps: '8',
+    ruShiftCaps: '*'
   },
   {
     type: 'standard',
@@ -95,9 +113,11 @@ const rowOne = [
     engCaseDown: '9',
     engCaseUp: '(',
     engCaps: '9',
+    engShiftCaps: '(',
     ruCaseDown: '9',
     ruCaseUp: '(',
-    ruCaps: '9'
+    ruCaps: '9',
+    ruShiftCaps: '('
   },
   {
     type: 'standard',
@@ -105,9 +125,11 @@ const rowOne = [
     engCaseDown: '0',
     engCaseUp: ')',
     engCaps: '0',
+    engShiftCaps: ')',
     ruCaseDown: '0',
     ruCaseUp: ')',
-    ruCaps: '0'
+    ruCaps: '0',
+    ruShiftCaps: ')'
   },
   {
     type: 'standard',
@@ -115,9 +137,11 @@ const rowOne = [
     engCaseDown: '-',
     engCaseUp: '_',
     engCaps: '-',
+    engShiftCaps: '_',
     ruCaseDown: '-',
     ruCaseUp: '_',
-    ruCaps: '-'
+    ruCaps: '-',
+    ruShiftCaps: '_'
   },
   {
     type: 'standard',
@@ -125,9 +149,11 @@ const rowOne = [
     engCaseDown: '=',
     engCaseUp: '+',
     engCaps: '=',
+    engShiftCaps: '+',
     ruCaseDown: '=',
     ruCaseUp: '+',
-    ruCaps: '='
+    ruCaps: '=',
+    ruShiftCaps: '+'
   },
   {
     type: 'backspace',
@@ -148,9 +174,11 @@ const rowTwo = [
     engCaseDown: 'q',
     engCaseUp: 'Q',
     engCaps: 'Q',
+    engShiftCaps: 'q',
     ruCaseDown: 'й',
     ruCaseUp: 'Й',
-    ruCaps: 'Й'
+    ruCaps: 'Й',
+    ruShiftCaps: 'й'
   },
   {
     type: 'standard',
@@ -158,9 +186,11 @@ const rowTwo = [
     engCaseDown: 'w',
     engCaseUp: 'W',
     engCaps: 'W',
+    engShiftCaps: 'w',
     ruCaseDown: 'ц',
     ruCaseUp: 'Ц',
-    ruCaps: 'Ц'
+    ruCaps: 'Ц',
+    ruShiftCaps: 'ц'
   },
   {
     type: 'standard',
@@ -168,9 +198,11 @@ const rowTwo = [
     engCaseDown: 'e',
     engCaseUp: 'E',
     engCaps: 'E',
+    engShiftCaps: 'e',
     ruCaseDown: 'у',
     ruCaseUp: 'У',
-    ruCaps: 'У'
+    ruCaps: 'У',
+    ruShiftCaps: 'у'
   },
   {
     type: 'standard',
@@ -178,9 +210,11 @@ const rowTwo = [
     engCaseDown: 'r',
     engCaseUp: 'R',
     engCaps: 'R',
+    engShiftCaps: 'r',
     ruCaseDown: 'к',
     ruCaseUp: 'К',
-    ruCaps: 'К'
+    ruCaps: 'К',
+    ruShiftCaps: 'к'
   },
   {
     type: 'standard',
@@ -188,9 +222,11 @@ const rowTwo = [
     engCaseDown: 't',
     engCaseUp: 'T',
     engCaps: 'T',
+    engShiftCaps: 't',
     ruCaseDown: 'е',
     ruCaseUp: 'Е',
-    ruCaps: 'Е'
+    ruCaps: 'Е',
+    ruShiftCaps: 'е'
   },
   {
     type: 'standard',
@@ -198,9 +234,11 @@ const rowTwo = [
     engCaseDown: 'y',
     engCaseUp: 'Y',
     engCaps: 'Y',
+    engShiftCaps: 'y',
     ruCaseDown: 'н',
     ruCaseUp: 'Н',
-    ruCaps: 'Н'
+    ruCaps: 'Н',
+    ruShiftCaps: 'н'
   },
   {
     type: 'standard',
@@ -208,9 +246,11 @@ const rowTwo = [
     engCaseDown: 'u',
     engCaseUp: 'U',
     engCaps: 'U',
+    engShiftCaps: 'u',
     ruCaseDown: 'г',
     ruCaseUp: 'Г',
-    ruCaps: 'Г'
+    ruCaps: 'Г',
+    ruShiftCaps: 'г'
   },
   {
     type: 'standard',
@@ -218,9 +258,11 @@ const rowTwo = [
     engCaseDown: 'i',
     engCaseUp: 'I',
     engCaps: 'I',
+    engShiftCaps: 'i',
     ruCaseDown: 'ш',
     ruCaseUp: 'Ш',
-    ruCaps: 'Ш'
+    ruCaps: 'Ш',
+    ruShiftCaps: 'ш'
   },
   {
     type: 'standard',
@@ -228,9 +270,11 @@ const rowTwo = [
     engCaseDown: 'o',
     engCaseUp: 'O',
     engCaps: 'O',
+    engShiftCaps: 'o',
     ruCaseDown: 'щ',
     ruCaseUp: 'Щ',
-    ruCaps: 'Щ'
+    ruCaps: 'Щ',
+    ruShiftCaps: 'щ'
   },
   {
     type: 'standard',
@@ -238,9 +282,11 @@ const rowTwo = [
     engCaseDown: 'p',
     engCaseUp: 'P',
     engCaps: 'P',
+    engShiftCaps: 'p',
     ruCaseDown: 'з',
     ruCaseUp: 'З',
-    ruCaps: 'З'
+    ruCaps: 'З',
+    ruShiftCaps: 'з'
   },
   {
     type: 'standard',
@@ -248,9 +294,11 @@ const rowTwo = [
     engCaseDown: '[',
     engCaseUp: '{',
     engCaps: '[',
+    engShiftCaps: '{',
     ruCaseDown: 'х',
     ruCaseUp: 'Х',
-    ruCaps: 'Х'
+    ruCaps: 'Х',
+    ruShiftCaps: 'х'
   },
   {
     type: 'standard',
@@ -258,9 +306,11 @@ const rowTwo = [
     engCaseDown: ']',
     engCaseUp: '}',
     engCaps: ']',
+    engShiftCaps: '}',
     ruCaseDown: 'ъ',
     ruCaseUp: 'Ъ',
-    ruCaps: 'Ъ'
+    ruCaps: 'Ъ',
+    ruShiftCaps: 'ъ'
   },
   {
     type: 'standard',
@@ -268,9 +318,11 @@ const rowTwo = [
     engCaseDown: '\\',
     engCaseUp: '|',
     engCaps: '\\',
+    engShiftCaps: '|',
     ruCaseDown: '\\',
     ruCaseUp: '/',
-    ruCaps: '\\'
+    ruCaps: '\\',
+    ruShiftCaps: '/'
   },
   {
     type: 'del',
@@ -291,9 +343,11 @@ const rowThree = [
     engCaseDown: 'a',
     engCaseUp: 'A',
     engCaps: 'A',
+    engShiftCaps: 'a',
     ruCaseDown: 'ф',
     ruCaseUp: 'Ф',
-    ruCaps: 'Ф'
+    ruCaps: 'Ф',
+    ruShiftCaps: 'ф'
   },
   {
     type: 'standard',
@@ -301,9 +355,11 @@ const rowThree = [
     engCaseDown: 's',
     engCaseUp: 'S',
     engCaps: 'S',
+    engShiftCaps: 's',
     ruCaseDown: 'ы',
     ruCaseUp: 'Ы',
-    ruCaps: 'Ы'
+    ruCaps: 'Ы',
+    ruShiftCaps: 'ы'
   },
   {
     type: 'standard',
@@ -311,9 +367,11 @@ const rowThree = [
     engCaseDown: 'd',
     engCaseUp: 'D',
     engCaps: 'D',
+    engShiftCaps: 'd',
     ruCaseDown: 'в',
     ruCaseUp: 'В',
-    ruCaps: 'В'
+    ruCaps: 'В',
+    ruShiftCaps: 'в'
   },
   {
     type: 'standard',
@@ -321,9 +379,11 @@ const rowThree = [
     engCaseDown: 'f',
     engCaseUp: 'F',
     engCaps: 'F',
+    engShiftCaps: 'f',
     ruCaseDown: 'а',
     ruCaseUp: 'А',
-    ruCaps: 'А'
+    ruCaps: 'А',
+    ruShiftCaps: 'а'
   },
   {
     type: 'standard',
@@ -331,9 +391,11 @@ const rowThree = [
     engCaseDown: 'g',
     engCaseUp: 'G',
     engCaps: 'G',
+    engShiftCaps: 'g',
     ruCaseDown: 'п',
     ruCaseUp: 'П',
-    ruCaps: 'П'
+    ruCaps: 'П',
+    ruShiftCaps: 'п'
   },
   {
     type: 'standard',
@@ -341,9 +403,11 @@ const rowThree = [
     engCaseDown: 'h',
     engCaseUp: 'H',
     engCaps: 'H',
+    engShiftCaps: 'h',
     ruCaseDown: 'р',
     ruCaseUp: 'Р',
-    ruCaps: 'Р'
+    ruCaps: 'Р',
+    ruShiftCaps: 'р'
   },
   {
     type: 'standard',
@@ -351,9 +415,11 @@ const rowThree = [
     engCaseDown: 'j',
     engCaseUp: 'J',
     engCaps: 'J',
+    engShiftCaps: 'j',
     ruCaseDown: 'о',
     ruCaseUp: 'О',
-    ruCaps: 'О'
+    ruCaps: 'О',
+    ruShiftCaps: 'о'
   },
   {
     type: 'standard',
@@ -361,9 +427,11 @@ const rowThree = [
     engCaseDown: 'k',
     engCaseUp: 'K',
     engCaps: 'K',
+    engShiftCaps: 'k',
     ruCaseDown: 'л',
     ruCaseUp: 'Л',
-    ruCaps: 'Л'
+    ruCaps: 'Л',
+    ruShiftCaps: 'л'
   },
   {
     type: 'standard',
@@ -371,9 +439,11 @@ const rowThree = [
     engCaseDown: 'l',
     engCaseUp: 'L',
     engCaps: 'L',
+    engShiftCaps: 'l',
     ruCaseDown: 'д',
     ruCaseUp: 'Д',
-    ruCaps: 'Д'
+    ruCaps: 'Д',
+    ruShiftCaps: 'д'
   },
   {
     type: 'standard',
@@ -381,9 +451,11 @@ const rowThree = [
     engCaseDown: ';',
     engCaseUp: ':',
     engCaps: ';',
+    engShiftCaps: ':',
     ruCaseDown: 'ж',
     ruCaseUp: 'Ж',
-    ruCaps: 'Ж'
+    ruCaps: 'Ж',
+    ruShiftCaps: 'ж'
   },
   {
     type: 'standard',
@@ -391,9 +463,11 @@ const rowThree = [
     engCaseDown: '\'',
     engCaseUp: '"',
     engCaps: '\'',
+    engShiftCaps: '"',
     ruCaseDown: 'э',
     ruCaseUp: 'Э',
-    ruCaps: 'Э'
+    ruCaps: 'Э',
+    ruShiftCaps: 'э'
   },
   {
     type: 'enter',
@@ -414,9 +488,11 @@ const rowFour = [
     engCaseDown: 'z',
     engCaseUp: 'Z',
     engCaps: 'Z',
+    engShiftCaps: 'z',
     ruCaseDown: 'я',
     ruCaseUp: 'Я',
-    ruCaps: 'Я'
+    ruCaps: 'Я',
+    ruShiftCaps: 'я'
   },
   {
     type: 'standard',
@@ -424,9 +500,11 @@ const rowFour = [
     engCaseDown: 'x',
     engCaseUp: 'X',
     engCaps: 'X',
+    engShiftCaps: 'x',
     ruCaseDown: 'ч',
     ruCaseUp: 'Ч',
-    ruCaps: 'Ч'
+    ruCaps: 'Ч',
+    ruShiftCaps: 'ч'
   },
   {
     type: 'standard',
@@ -434,9 +512,11 @@ const rowFour = [
     engCaseDown: 'c',
     engCaseUp: 'C',
     engCaps: 'C',
+    engShiftCaps: 'c',
     ruCaseDown: 'с',
     ruCaseUp: 'С',
-    ruCaps: 'С'
+    ruCaps: 'С',
+    ruShiftCaps: 'с'
   },
   {
     type: 'standard',
@@ -444,9 +524,11 @@ const rowFour = [
     engCaseDown: 'v',
     engCaseUp: 'V',
     engCaps: 'V',
+    engShiftCaps: 'v',
     ruCaseDown: 'м',
     ruCaseUp: 'М',
-    ruCaps: 'М'
+    ruCaps: 'М',
+    ruShiftCaps: 'м'
   },
   {
     type: 'standard',
@@ -454,9 +536,11 @@ const rowFour = [
     engCaseDown: 'b',
     engCaseUp: 'B',
     engCaps: 'B',
+    engShiftCaps: 'b',
     ruCaseDown: 'и',
     ruCaseUp: 'И',
-    ruCaps: 'И'
+    ruCaps: 'И',
+    ruShiftCaps: 'и'
   },
   {
     type: 'standard',
@@ -464,9 +548,11 @@ const rowFour = [
     engCaseDown: 'n',
     engCaseUp: 'N',
     engCaps: 'N',
+    engShiftCaps: 'n',
     ruCaseDown: 'т',
     ruCaseUp: 'Т',
-    ruCaps: 'T'
+    ruCaps: 'T',
+    ruShiftCaps: 'т'
   },
   {
     type: 'standard',
@@ -474,9 +560,11 @@ const rowFour = [
     engCaseDown: 'm',
     engCaseUp: 'M',
     engCaps: 'M',
+    engShiftCaps: 'm',
     ruCaseDown: 'ь',
     ruCaseUp: 'Ь',
-    ruCaps: 'Ь'
+    ruCaps: 'Ь',
+    ruShiftCaps: 'ь'
   },
   {
     type: 'standard',
@@ -484,9 +572,11 @@ const rowFour = [
     engCaseDown: ',',
     engCaseUp: '<',
     engCaps: ',',
+    engShiftCaps: '<',
     ruCaseDown: 'б',
     ruCaseUp: 'Б',
-    ruCaps: 'Б'
+    ruCaps: 'Б',
+    ruShiftCaps: 'б'
   },
   {
     type: 'standard',
@@ -494,9 +584,11 @@ const rowFour = [
     engCaseDown: '.',
     engCaseUp: '>',
     engCaps: '.',
+    engShiftCaps: '>',
     ruCaseDown: 'ю',
     ruCaseUp: 'Ю',
-    ruCaps: 'Ю'
+    ruCaps: 'Ю',
+    ruShiftCaps: 'ю'
   },
   {
     type: 'standard',
@@ -504,9 +596,11 @@ const rowFour = [
     engCaseDown: '/',
     engCaseUp: '?',
     engCaps: '/',
+    engShiftCaps: '?',
     ruCaseDown: '.',
     ruCaseUp: ',',
-    ruCaps: '.'
+    ruCaps: '.',
+    ruShiftCaps: ','
   },
   {
     type: 'arrow-up',

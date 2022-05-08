@@ -1,3 +1,5 @@
+import { state } from './state.js';
+
 export function trackKeystrokes() {
   document.addEventListener('keydown', (event) => {
     event.preventDefault();
@@ -83,32 +85,88 @@ export function trackKeystrokes() {
       textarea.selectionStart = selStart + 1;
       textarea.selectionEnd = selStart + 1;
     } else if ((key.classList[1] === 'shift-left') || (key.classList[1] === 'shift-right')) {
+      state.setShift(true);
+
       allCharacterKeys.forEach(element => {
         let keyEng = element.querySelector('.key__eng');
         let keyRus = element.querySelector('.key__rus');
 
         if (keyEng.matches('.hidden')) {
-          let ruCaps = keyRus.querySelector('.caps');
+          let ruCaps = keyRus.querySelector('.capsLock');
           let ruCaseDown = keyRus.querySelector('.caseDown');
           let ruCaseUp = keyRus.querySelector('.caseUp');
+          let ruShiftCaps = keyRus.querySelector('.shiftCaps');
 
-          if (ruCaps.matches('.hidden')) {
+          if (state.getCaps()) {
+            ruCaps.classList.add('hidden');
+            ruShiftCaps.classList.remove('hidden');
+          } else {
             ruCaseDown.classList.add('hidden');
             ruCaseUp.classList.remove('hidden');
+          }
+        } else {
+          let engCaps = keyEng.querySelector('.capsLock');
+          let engCaseDown = keyEng.querySelector('.caseDown');
+          let engCaseUp = keyEng.querySelector('.caseUp');
+          let engShiftCaps = keyEng.querySelector('.shiftCaps');
+
+          if (state.getCaps()) {
+            engCaps.classList.add('hidden');
+            engShiftCaps.classList.remove('hidden');
           } else {
+            engCaseDown.classList.add('hidden');
+            engCaseUp.classList.remove('hidden');
+          }
+        }
+      });
+    } else if (key.classList[1] === 'caps') {
+      state.setCaps();
+
+      if (!state.getCaps()) {
+        key.classList.remove('pressed');
+        key.classList.add('unpressed');
+      }
+
+      allCharacterKeys.forEach(element => {
+        let keyEng = element.querySelector('.key__eng');
+        let keyRus = element.querySelector('.key__rus');
+
+        if (keyEng.matches('.hidden')) {
+          let ruCaps = keyRus.querySelector('.capsLock');
+          let ruCaseDown = keyRus.querySelector('.caseDown');
+          let ruCaseUp = keyRus.querySelector('.caseUp');
+          let ruShiftCaps = keyRus.querySelector('.shiftCaps');
+
+          if (state.getCaps() && state.getShift()) {
             ruCaseUp.classList.add('hidden');
+            ruShiftCaps.classList.remove('hidden');
+          } else if (!state.getCaps() && state.getShift()) {
+            ruShiftCaps.classList.add('hidden');
+            ruCaseUp.classList.remove('hidden');
+          } else if (state.getCaps()) {
+            ruCaseDown.classList.add('hidden');
+            ruCaps.classList.remove('hidden');
+          } else {
+            ruCaps.classList.add('hidden');
             ruCaseDown.classList.remove('hidden');
           }
         } else {
-          let engCaps = keyEng.querySelector('.caps');
+          let engCaps = keyEng.querySelector('.capsLock');
           let engCaseDown = keyEng.querySelector('.caseDown');
           let engCaseUp = keyEng.querySelector('.caseUp');
+          let engShiftCaps = keyEng.querySelector('.shiftCaps');
 
-          if (engCaps.matches('.hidden')) {
-            engCaseDown.classList.add('hidden');
-            engCaseUp.classList.remove('hidden');
-          } else {
+          if (state.getCaps() && state.getShift()) {
             engCaseUp.classList.add('hidden');
+            engShiftCaps.classList.remove('hidden');
+          } else if (!state.getCaps() && state.getShift()) {
+            engShiftCaps.classList.add('hidden');
+            engCaseUp.classList.remove('hidden');
+          } else if (state.getCaps()) {
+            engCaseDown.classList.add('hidden');
+            engCaps.classList.remove('hidden');
+          } else {
+            engCaps.classList.add('hidden');
             engCaseDown.classList.remove('hidden');
           }
         }
@@ -118,39 +176,45 @@ export function trackKeystrokes() {
 
   document.addEventListener('keyup', (event) => {
     let key = document.getElementById(event.code);
-    key.classList.remove('pressed');
-    key.classList.add('unpressed');
+    if (key.classList[1] !== 'caps') {
+      key.classList.remove('pressed');
+      key.classList.add('unpressed');
+    }
 
     let allCharacterKeys = document.querySelectorAll('.standard');
 
     if ((key.classList[1] === 'shift-left') || (key.classList[1] === 'shift-right')) {
+      state.setShift(false);
+
       allCharacterKeys.forEach(element => {
         let keyEng = element.querySelector('.key__eng');
         let keyRus = element.querySelector('.key__rus');
 
         if (keyEng.matches('.hidden')) {
-          let ruCaps = keyRus.querySelector('.caps');
+          let ruCaps = keyRus.querySelector('.capsLock');
           let ruCaseDown = keyRus.querySelector('.caseDown');
           let ruCaseUp = keyRus.querySelector('.caseUp');
+          let ruShiftCaps = keyRus.querySelector('.shiftCaps');
 
-          if (ruCaps.matches('.hidden')) {
+          if (state.getCaps()) {
+            ruShiftCaps.classList.add('hidden');
+            ruCaps.classList.remove('hidden');
+          } else {
             ruCaseUp.classList.add('hidden');
             ruCaseDown.classList.remove('hidden');
-          } else {
-            ruCaseDown.classList.add('hidden');
-            ruCaseUp.classList.remove('hidden');
           }
         } else {
-          let engCaps = keyEng.querySelector('.caps');
+          let engCaps = keyEng.querySelector('.capsLock');
           let engCaseDown = keyEng.querySelector('.caseDown');
           let engCaseUp = keyEng.querySelector('.caseUp');
+          let engShiftCaps = keyEng.querySelector('.shiftCaps');
 
-          if (engCaps.matches('.hidden')) {
+          if (state.getCaps()) {
+            engShiftCaps.classList.add('hidden');
+            engCaps.classList.remove('hidden');
+          } else {
             engCaseUp.classList.add('hidden');
             engCaseDown.classList.remove('hidden');
-          } else {
-            engCaseDown.classList.add('hidden');
-            engCaseUp.classList.remove('hidden');
           }
         }
       });
