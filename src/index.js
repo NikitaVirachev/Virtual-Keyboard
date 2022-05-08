@@ -4,6 +4,9 @@ import {
   rowOne, rowTwo, rowThree, rowFour, rowFive
 } from './assets/modules/variables.js';
 import { trackKeystrokes } from './assets/modules/trackKeystrokes';
+import { mouseDown, mouseUp } from './assets/modules/trackMouseClick.js';
+
+if (sessionStorage.length === 0) sessionStorage.setItem('layout', 'eng');
 
 const BODY = document.body;
 
@@ -24,6 +27,8 @@ wrapper.append(wrapperText);
 
 const virtualKeyboard = document.createElement('div');
 virtualKeyboard.classList.add('virtual-keyboard');
+virtualKeyboard.addEventListener('mousedown', mouseDown);
+document.addEventListener('mouseup', mouseUp);
 
 let rows = [];
 rows.push(rowOne);
@@ -52,5 +57,4 @@ wrapper.append(wrapperLanguage);
 
 BODY.append(wrapper);
 
-if (sessionStorage.length === 0) sessionStorage.setItem('layout', 'eng');
 trackKeystrokes();
