@@ -42,7 +42,7 @@ export function trackKeystrokes() {
         + textarea.value.slice(selEnd);
         textarea.selectionStart = selStart;
         textarea.selectionEnd = selStart;
-      } else {
+      } else if (selStart !== 0) {
         textarea.value = textarea.value.slice(0, selStart - 1)
         + textarea.value.slice(selEnd);
         textarea.selectionStart = selStart - 1;
