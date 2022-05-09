@@ -64,6 +64,18 @@ export function mouseDown(event) {
       textarea.selectionStart = selStart - 1;
       textarea.selectionEnd = selStart - 1;
     }
+  } else if (key.classList[1] === 'del') {
+    if (selStart !== selEnd) {
+      textarea.value = textarea.value.slice(0, selStart)
+      + textarea.value.slice(selEnd);
+      textarea.selectionStart = selStart;
+      textarea.selectionEnd = selStart;
+    } else {
+      textarea.value = textarea.value.slice(0, selStart)
+      + textarea.value.slice(selStart + 1);
+      textarea.selectionStart = selStart;
+      textarea.selectionEnd = selStart;
+    }
   }
 }
 
