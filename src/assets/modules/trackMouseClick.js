@@ -44,6 +44,7 @@ export function mouseDown(event) {
 
   let textarea = document.getElementById('textarea');
   let selStart = textarea.selectionStart;
+  let selEnd = textarea.selectionEnd;
 
   if (key.classList[1] === 'standard') {
     textarea.value = textarea.value.slice(0, selStart)
@@ -51,6 +52,18 @@ export function mouseDown(event) {
       + textarea.value.slice(selStart);
     textarea.selectionStart = selStart + 1;
     textarea.selectionEnd = selStart + 1;
+  } else if (key.classList[1] === 'backspace') {
+    if (selStart !== selEnd) {
+      textarea.value = textarea.value.slice(0, selStart)
+      + textarea.value.slice(selEnd);
+      textarea.selectionStart = selStart;
+      textarea.selectionEnd = selStart;
+    } else {
+      textarea.value = textarea.value.slice(0, selStart - 1)
+      + textarea.value.slice(selEnd);
+      textarea.selectionStart = selStart - 1;
+      textarea.selectionEnd = selStart - 1;
+    }
   }
 }
 
