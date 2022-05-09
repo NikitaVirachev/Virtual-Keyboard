@@ -31,7 +31,7 @@ export function trackKeystrokes() {
     }
 
     if (key.classList[1] === 'standard') {
-      if (state.getShift()) {
+      if (state.getShift() || state.getCaps()) {
         textarea.value = textarea.value.slice(0, selStart)
           + value
           + textarea.value.slice(selStart);

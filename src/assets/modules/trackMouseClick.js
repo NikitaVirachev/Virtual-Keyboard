@@ -178,6 +178,58 @@ export function mouseDown(event) {
         }
       }
     });
+  } else if (key.classList[1] === 'caps') {
+    state.setCaps();
+
+    if (!state.getCaps()) {
+      key.classList.remove('pressed');
+      key.classList.add('unpressed');
+    }
+
+    allCharacterKeys.forEach(element => {
+      let keyEng = element.querySelector('.key__eng');
+      let keyRus = element.querySelector('.key__rus');
+
+      if (keyEng.matches('.hidden')) {
+        let ruCaps = keyRus.querySelector('.capsLock');
+        let ruCaseDown = keyRus.querySelector('.caseDown');
+        let ruCaseUp = keyRus.querySelector('.caseUp');
+        let ruShiftCaps = keyRus.querySelector('.shiftCaps');
+
+        if (state.getCaps() && state.getShift()) {
+          ruCaseUp.classList.add('hidden');
+          ruShiftCaps.classList.remove('hidden');
+        } else if (!state.getCaps() && state.getShift()) {
+          ruShiftCaps.classList.add('hidden');
+          ruCaseUp.classList.remove('hidden');
+        } else if (state.getCaps()) {
+          ruCaseDown.classList.add('hidden');
+          ruCaps.classList.remove('hidden');
+        } else {
+          ruCaps.classList.add('hidden');
+          ruCaseDown.classList.remove('hidden');
+        }
+      } else {
+        let engCaps = keyEng.querySelector('.capsLock');
+        let engCaseDown = keyEng.querySelector('.caseDown');
+        let engCaseUp = keyEng.querySelector('.caseUp');
+        let engShiftCaps = keyEng.querySelector('.shiftCaps');
+
+        if (state.getCaps() && state.getShift()) {
+          engCaseUp.classList.add('hidden');
+          engShiftCaps.classList.remove('hidden');
+        } else if (!state.getCaps() && state.getShift()) {
+          engShiftCaps.classList.add('hidden');
+          engCaseUp.classList.remove('hidden');
+        } else if (state.getCaps()) {
+          engCaseDown.classList.add('hidden');
+          engCaps.classList.remove('hidden');
+        } else {
+          engCaps.classList.add('hidden');
+          engCaseDown.classList.remove('hidden');
+        }
+      }
+    });
   }
 }
 
