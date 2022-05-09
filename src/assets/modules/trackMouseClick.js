@@ -82,6 +82,30 @@ export function mouseDown(event) {
       + textarea.value.slice(selStart);
     textarea.selectionStart = selStart + 1;
     textarea.selectionEnd = selStart + 1;
+  } else if (key.classList[1] === 'arrow-left') {
+    textarea.value = textarea.value.slice(0, selStart)
+      + '\u2BC7'
+      + textarea.value.slice(selStart);
+    textarea.selectionStart = selStart + 1;
+    textarea.selectionEnd = selStart + 1;
+  } else if (key.classList[1] === 'arrow-bottom') {
+    textarea.value = textarea.value.slice(0, selStart)
+      + '\u2BC6'
+      + textarea.value.slice(selStart);
+    textarea.selectionStart = selStart + 1;
+    textarea.selectionEnd = selStart + 1;
+  } else if (key.classList[1] === 'arrow-right') {
+    textarea.value = textarea.value.slice(0, selStart)
+      + '\u2BC8'
+      + textarea.value.slice(selStart);
+    textarea.selectionStart = selStart + 1;
+    textarea.selectionEnd = selStart + 1;
+  } else if (key.classList[1] === 'arrow-up') {
+    textarea.value = textarea.value.slice(0, selStart)
+      + '\u2BC5'
+      + textarea.value.slice(selStart);
+    textarea.selectionStart = selStart + 1;
+    textarea.selectionEnd = selStart + 1;
   }
 }
 
