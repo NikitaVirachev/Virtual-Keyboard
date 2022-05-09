@@ -158,6 +158,7 @@ export function mouseDown(event) {
 
         if (state.getCaps()) {
           ruCaps.classList.add('hidden');
+          ruCaseDown.classList.add('hidden');
           ruShiftCaps.classList.remove('hidden');
         } else {
           ruCaseDown.classList.add('hidden');
@@ -171,6 +172,7 @@ export function mouseDown(event) {
 
         if (state.getCaps()) {
           engCaps.classList.add('hidden');
+          engCaseDown.classList.add('hidden');
           engShiftCaps.classList.remove('hidden');
         } else {
           engCaseDown.classList.add('hidden');
@@ -287,6 +289,7 @@ export function mouseUp() {
 
         if (state.getCaps()) {
           ruShiftCaps.classList.add('hidden');
+          ruCaseDown.classList.add('hidden');
           ruCaps.classList.remove('hidden');
         } else {
           ruCaseUp.classList.add('hidden');
@@ -300,6 +303,7 @@ export function mouseUp() {
 
         if (state.getCaps()) {
           engShiftCaps.classList.add('hidden');
+          engCaseDown.classList.add('hidden');
           engCaps.classList.remove('hidden');
         } else {
           engCaseUp.classList.add('hidden');
