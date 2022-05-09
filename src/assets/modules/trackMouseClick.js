@@ -76,6 +76,12 @@ export function mouseDown(event) {
       textarea.selectionStart = selStart;
       textarea.selectionEnd = selStart;
     }
+  } else if (key.classList[1] === 'enter') {
+    textarea.value = textarea.value.slice(0, selStart)
+      + '\n'
+      + textarea.value.slice(selStart);
+    textarea.selectionStart = selStart + 1;
+    textarea.selectionEnd = selStart + 1;
   }
 }
 
