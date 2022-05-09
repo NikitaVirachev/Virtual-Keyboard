@@ -12,8 +12,8 @@ export let state = {
     this.caps = !this.caps;
   },
 
-  setAlt() {
-    this.alt = !this.alt;
+  setAlt(value) {
+    this.alt = value;
   },
 
   setCurrentKeyId(id) {

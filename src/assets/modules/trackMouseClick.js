@@ -34,7 +34,7 @@ export function mouseDown(event) {
       }
     });
   } else {
-    let children = key.lastChildren.children;
+    let children = key.lastChild.children;
     [...children].forEach(element => {
       if (!element.classList.contains('hidden')) {
         value = element.innerHTML;
@@ -230,6 +230,32 @@ export function mouseDown(event) {
         }
       }
     });
+  } else if (key.classList[1] === 'alt-left') {
+    state.setAlt(true);
+    /* eslint-disable */ console.log(state.getAlt());
+    if (state.getShift()) {
+      if (sessionStorage.getItem('layout') === 'eng') {
+        sessionStorage.setItem('layout', 'rus');
+
+        allCharacterKeys.forEach(element => {
+          let keyEng = element.querySelector('.key__eng');
+          let keyRus = element.querySelector('.key__rus');
+
+          keyEng.classList.add('hidden');
+          keyRus.classList.remove('hidden');
+        });
+      } else {
+        sessionStorage.setItem('layout', 'eng');
+
+        allCharacterKeys.forEach(element => {
+          let keyEng = element.querySelector('.key__eng');
+          let keyRus = element.querySelector('.key__rus');
+
+          keyRus.classList.add('hidden');
+          keyEng.classList.remove('hidden');
+        });
+      }
+    }
   }
 }
 
@@ -281,5 +307,7 @@ export function mouseUp() {
         }
       }
     });
+  } else if (key.classList[1] === 'alt-left') {
+    state.setAlt(false);
   }
 }

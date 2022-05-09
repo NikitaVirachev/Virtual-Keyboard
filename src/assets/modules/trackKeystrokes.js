@@ -22,7 +22,7 @@ export function trackKeystrokes() {
         }
       });
     } else {
-      let children = key.lastChildren.children;
+      let children = key.lastChild.children;
       [...children].forEach(element => {
         if (!element.classList.contains('hidden')) {
           value = element.innerHTML;
@@ -31,19 +31,11 @@ export function trackKeystrokes() {
     }
 
     if (key.classList[1] === 'standard') {
-      if (state.getShift() || state.getCaps()) {
-        textarea.value = textarea.value.slice(0, selStart)
-          + value
-          + textarea.value.slice(selStart);
-        textarea.selectionStart = selStart + 1;
-        textarea.selectionEnd = selStart + 1;
-      } else {
-        textarea.value = textarea.value.slice(0, selStart)
-          + event.key
-          + textarea.value.slice(selStart);
-        textarea.selectionStart = selStart + 1;
-        textarea.selectionEnd = selStart + 1;
-      }
+      textarea.value = textarea.value.slice(0, selStart)
+        + value
+        + textarea.value.slice(selStart);
+      textarea.selectionStart = selStart + 1;
+      textarea.selectionEnd = selStart + 1;
     } else if (key.classList[1] === 'backspace') {
       if (selStart !== selEnd) {
         textarea.value = textarea.value.slice(0, selStart)
@@ -222,7 +214,7 @@ export function trackKeystrokes() {
         }
       });
     } else if (key.classList[1] === 'alt-left') {
-      state.setAlt();
+      state.setAlt(true);
 
       if (state.getShift()) {
         if (sessionStorage.getItem('layout') === 'eng') {
@@ -295,7 +287,7 @@ export function trackKeystrokes() {
         }
       });
     } else if (key.classList[1] === 'alt-left') {
-      state.setAlt();
+      state.setAlt(false);
     }
   });
 }
