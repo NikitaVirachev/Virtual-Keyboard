@@ -188,6 +188,8 @@ export function mouseUp() {
     key.classList.remove('pressed');
     key.classList.add('unpressed');
     state.setCurrentKeyId(null);
+  } else {
+    return;
   }
 
   let allCharacterKeys = document.querySelectorAll('.standard');

@@ -12,12 +12,38 @@ export function trackKeystrokes() {
     let selEnd = textarea.selectionEnd;
     let allCharacterKeys = document.querySelectorAll('.standard');
 
+    let value = '';
+
+    if (sessionStorage.getItem('layout') === 'eng') {
+      let children = key.firstChild.children;
+      [...children].forEach(element => {
+        if (!element.classList.contains('hidden')) {
+          value = element.innerHTML;
+        }
+      });
+    } else {
+      let children = key.lastChildren.children;
+      [...children].forEach(element => {
+        if (!element.classList.contains('hidden')) {
+          value = element.innerHTML;
+        }
+      });
+    }
+
     if (key.classList[1] === 'standard') {
-      textarea.value = textarea.value.slice(0, selStart)
-        + event.key
-        + textarea.value.slice(selStart);
-      textarea.selectionStart = selStart + 1;
-      textarea.selectionEnd = selStart + 1;
+      if (state.getShift()) {
+        textarea.value = textarea.value.slice(0, selStart)
+          + value
+          + textarea.value.slice(selStart);
+        textarea.selectionStart = selStart + 1;
+        textarea.selectionEnd = selStart + 1;
+      } else {
+        textarea.value = textarea.value.slice(0, selStart)
+          + event.key
+          + textarea.value.slice(selStart);
+        textarea.selectionStart = selStart + 1;
+        textarea.selectionEnd = selStart + 1;
+      }
     } else if (key.classList[1] === 'backspace') {
       if (selStart !== selEnd) {
         textarea.value = textarea.value.slice(0, selStart)
