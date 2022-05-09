@@ -130,6 +130,11 @@ export function mouseDown(event) {
           let keyEng = element.querySelector('.key__eng');
           let keyRus = element.querySelector('.key__rus');
 
+          let children = keyEng.children;
+          [...children].forEach(child => {
+            child.classList.add('hidden');
+          });
+
           keyEng.classList.add('hidden');
           keyRus.classList.remove('hidden');
         });
@@ -139,6 +144,11 @@ export function mouseDown(event) {
         allCharacterKeys.forEach(element => {
           let keyEng = element.querySelector('.key__eng');
           let keyRus = element.querySelector('.key__rus');
+
+          let children = keyRus.children;
+          [...children].forEach(child => {
+            child.classList.add('hidden');
+          });
 
           keyRus.classList.add('hidden');
           keyEng.classList.remove('hidden');
