@@ -234,7 +234,6 @@ export function mouseDown(event) {
     });
   } else if (key.classList[1] === 'alt-left') {
     state.setAlt(true);
-    /* eslint-disable */ console.log(state.getAlt());
     if (state.getShift()) {
       if (sessionStorage.getItem('layout') === 'eng') {
         sessionStorage.setItem('layout', 'rus');
